@@ -71,7 +71,7 @@ $(warning **********************************************************************
 $(error stopping)
 endif
 
-ifeq ($(TW_CUSTOM_THEME),)
+ifneq ($(TW_CUSTOM_THEME),)
 	ifeq "$(wildcard $(commands_recovery_local_path)/gui/devices/$(DEVICE_RESOLUTION))" ""
 	$(warning ********************************************************************************)
 	$(warning * DEVICE_RESOLUTION ($(DEVICE_RESOLUTION)) does NOT EXIST in $(commands_recovery_local_path)/gui/devices )
